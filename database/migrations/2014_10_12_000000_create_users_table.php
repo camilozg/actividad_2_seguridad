@@ -27,10 +27,7 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->string('iban',24)->nullable();
             $table->string('about',250)->nullable();
-
-            // $table->timestamp('email_verified_at')->nullable();
-            // $table->rememberToken();
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 

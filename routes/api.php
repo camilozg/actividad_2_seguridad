@@ -21,5 +21,5 @@ use App\Http\Controllers\AuthController;
 
 Route::controller(AuthController::class)->prefix('accounts')->group(function(){
     Route::post('signup/', 'signup');
-    Route::post('login/', 'login');
+    Route::post('login/', 'login')->middleware('throttle:10,1');
 });
